@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject } from 'rxjs';
 import { tap, take } from 'rxjs/operators';
+import { environment } from '@environment';
 
 @Component({
   templateUrl: './ui.html'
@@ -13,7 +14,7 @@ export class SubjectsComponent implements OnInit {
 
   ngOnInit() {
     this.httpClient
-      .get('https://api.github.com/repositories')
+      .get(`${environment.githubApi}/repositories`)
       .pipe(
         tap((res: any[]) => this.callResult$.next(res)),
         take(1)

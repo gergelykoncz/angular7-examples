@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { environment } from '@environment';
 
 @Component({
   templateUrl: './ui.html'
@@ -14,7 +15,7 @@ export class ManualComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sub$ = this.httpClient
-      .get('http://github.com')
+      .get(`${environment.githubApi}/repositories`)
       .pipe(tap(res => (this.result = res)))
       .subscribe();
   }

@@ -1,5 +1,7 @@
+import { MultipleResultsComponent } from './multiple-results';
 import { MultipleSubscriptionsComponent } from './multiple-subs';
+import { SubjectsComponent } from './subjects';
 
-export { MultipleSubscriptionsComponent };
+export { MultipleResultsComponent, MultipleSubscriptionsComponent, SubjectsComponent };
 
-export const components = [MultipleSubscriptionsComponent];
+export const components = [MultipleResultsComponent, MultipleSubscriptionsComponent, SubjectsComponent];

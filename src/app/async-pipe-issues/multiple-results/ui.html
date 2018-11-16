@@ -1,0 +1,14 @@
+<h2>Waiting for all result sets to arrive</h2>
+<p>Note that route resolvers would be a better approach</p>
+
+<ng-container *ngIf="(result$ | async) as result">
+  <h2>Repositories</h2>
+  <ul>
+    <li *ngFor="let repo of (result.repositories | slice: 0:10)">{{ repo.name }}</li>
+  </ul>
+
+  <h2>Users</h2>
+  <ul>
+    <li *ngFor="let user of (result.users | slice: 0:10)">{{ user.login }}</li>
+  </ul>
+</ng-container>

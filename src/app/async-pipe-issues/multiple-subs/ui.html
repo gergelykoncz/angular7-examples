@@ -1,0 +1,14 @@
+<h2>Wrong solution, this will execute the HTTP call twice</h2>
+<ul>
+  <li *ngFor="let item of (callResult$ | async | slice: 0:10)">{{ item.name }}</li>
+</ul>
+<span>Item count: {{ (callResult$ | async)?.length }} </span>
+
+<h2>Proper solution, reuse the call result</h2>
+<ng-container *ngIf="(callResult$ | async | slice: 0:10) as result">
+  <ul>
+    <li *ngFor="let item of result">{{ item.name }}</li>
+  </ul>
+  <span>Item count: {{ result?.length }} </span>
+</ng-container>
+<p><i>Note that there are 3 calls. The first solution executes twice, the second once.</i></p>

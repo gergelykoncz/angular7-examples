@@ -5,9 +5,9 @@
 <span>Item count: {{ (callResult$ | async)?.length }} </span>
 
 <h2>Proper solution, reuse the call result</h2>
-<ng-container *ngIf="(callResult$ | async | slice: 0:10) as result">
+<ng-container *ngIf="(callResult$ | async) as result">
   <ul>
-    <li *ngFor="let item of result">{{ item.name }}</li>
+    <li *ngFor="let item of (result | slice: 0:10)">{{ item.name }}</li>
   </ul>
   <span>Item count: {{ result?.length }} </span>
 </ng-container>

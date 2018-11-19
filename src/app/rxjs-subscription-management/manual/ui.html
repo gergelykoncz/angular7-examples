@@ -1,2 +1,4 @@
 <h2>Manual subscription management example</h2>
-<pre>{{ result }}</pre>
+<ul>
+  <li *ngFor="let repo of (result | evenodd: 'odd')">{{ repo.name }}</li>
+</ul>

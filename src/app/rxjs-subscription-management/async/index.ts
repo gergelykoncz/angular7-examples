@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '@environment';
+import { HttpService } from '@app/core';
 
 @Component({
   templateUrl: './ui.html'
@@ -9,9 +9,9 @@ import { environment } from '@environment';
 export class AsyncComponent implements OnInit {
   public result$: Observable<any>;
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpService: HttpService) {}
 
   ngOnInit() {
-    this.result$ = this.httpClient.get(`${environment.githubApi}/repositories`);
+    this.result$ = this.httpService.get(`${environment.githubApi}/repositories`);
   }
 }

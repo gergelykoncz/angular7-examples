@@ -6,7 +6,7 @@ import { EvenOddPipe } from './even-odd-pipe';
 
 @NgModule({
   declarations: [EvenOddPipe],
-  imports: [CommonModule, HttpClientModule],
-  exports: [CommonModule, HttpClientModule, EvenOddPipe]
+  imports: [CommonModule],
+  exports: [CommonModule, EvenOddPipe]
 })
 export class SharedModule {}

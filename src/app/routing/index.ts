@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'sm', loadChildren: './rxjs-subscription-management' },
-  { path: 'async', loadChildren: './async-pipe-issues' }
+  { path: 'sm', loadChildren: '../rxjs-subscription-management/index' },
+  { path: 'async', loadChildren: '../async-pipe-issues/index' }
 ];
 
 @NgModule({

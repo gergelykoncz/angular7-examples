@@ -1,4 +1,6 @@
 <h2>Async pipe example</h2>
 <ng-container *ngIf="(result$ | async) as result">
-  <pre>{{ result }}</pre>
+  <ul>
+    <li *ngFor="let repo of result"><app-repo [repo]="repo"></app-repo></li>
+  </ul>
 </ng-container>

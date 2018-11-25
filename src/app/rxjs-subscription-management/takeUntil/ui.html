@@ -1,2 +1,4 @@
 <h2>TakeUntil example</h2>
-<pre>{{ result }}</pre>
+<ul>
+  <li *ngFor="let repo of result"><app-repo [repo]="repo"></app-repo></li>
+</ul>

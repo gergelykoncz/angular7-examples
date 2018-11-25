@@ -1,5 +1,5 @@
 <h2>The BehaviorSubject will cache and return the result for the call for each subscriber</h2>
 <ul>
-  <li *ngFor="let item of (callResult$ | async | slice: 0:10)">{{ item.name }}</li>
+  <li *ngFor="let repo of (callResult$ | async | slice: 0:10)"><app-repo [repo]="repo"></app-repo></li>
 </ul>
 <span>Item count: {{ (callResult$ | async)?.length }} </span>

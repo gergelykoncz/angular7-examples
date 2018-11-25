@@ -4,7 +4,7 @@
 <ng-container *ngIf="(result$ | async) as result">
   <h2>Repositories</h2>
   <ul>
-    <li *ngFor="let repo of (result.repositories | slice: 0:10)">{{ repo.name }}</li>
+    <li *ngFor="let repo of (result.repositories | slice: 0:10)"><app-repo [repo]="repo"></app-repo></li>
   </ul>
 
   <h2>Users</h2>

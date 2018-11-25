@@ -1,0 +1,8 @@
+<ng-container *ngIf="repo">
+  <div>
+    <h3>{{ repo.name }}</h3>
+    <h5>{{ repo.full_name }}</h5>
+    <p>{{ repo.description }}</p>
+    <p><a [href]="repo.html_url">Visit repository</a></p>
+  </div>
+</ng-container>

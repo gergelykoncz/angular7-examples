@@ -1,3 +1,1 @@
-<ng-container *ngIf="(result$ | async) as repositories">
-  <app-repo *ngFor="let repo of repositories" [repo]="repo"></app-repo>
-</ng-container>
+<app-repo *ngFor="let repo of (result$ | async)" [repo]="repo"></app-repo>

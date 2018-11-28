@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: 'sm', loadChildren: '../rxjs-subscription-management/index' },
   { path: 'async', loadChildren: '../async-pipe-issues/index' },
-  { path: 'dumb', loadChildren: '../dumb-components/index' }
+  { path: 'dumb', loadChildren: '../dumb-components/index' },
+  { path: 'directives', loadChildren: '../directive-demo/index' }
 ];
 
 @NgModule({
